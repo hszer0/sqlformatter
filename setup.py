@@ -7,7 +7,7 @@ if sys.platform == "win32":
 
 
 setup(name="sqlformatter",
-      version="0.0.2",
+      version="0.0.3",
       author="Patrick Liem",
       author_email="hszer0@gmail.com",
       executables=[Executable("sqlformatter.py", base=base, shortcutName="SQL Formatter", shortcutDir="DesktopFolder")]

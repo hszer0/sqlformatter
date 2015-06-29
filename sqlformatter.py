@@ -54,7 +54,8 @@ class GUI:
             self.tk, text="Copy Formatted Query", command=self.copy_min)
         self.tk.button.pack()
         self.tk.text.config(state=tk.DISABLED)
-        self.tk.attributes("-alpha", 0.85)
+        self.tk.attributes("-alpha", 0.75)
+        self.tk.attributes("-topmost", 1)
         self.tk.mainloop()
 
     def watch_clipboard(self):

@@ -7,7 +7,7 @@ from pygments.lexers import sql
 operatorspaceafter = r"""[=*><!+\-/]+[^ =*<>!+\-/]"""
 operatorspacebefore = r"""[^ =*<>!+\-/][=*><!+\-/]+"""
 endoperator = r"""[=*><!+\-/]+$"""
-keywords = ['select', 'update', 'insert', 'create', 'create', 'drop', 'alter']
+keywords = ['select', 'update', 'insert', 'create', 'delete', 'drop', 'alter']
 
 
 def format(s):
@@ -70,7 +70,7 @@ class GUI:
                         self.tk.text.insert(tk.END, content, str(token))
                     self.tk.clipboard_clear()
                     self.tk.clipboard_append(newtext)
-                    self.tk.wm_state('normal')
+                    self.tk.deiconify()
                     self.tk.focus_force()
             else:
                 self.tk.text.delete(1.0, tk.END)
@@ -86,7 +86,7 @@ class GUI:
         self.tk.clipboard_clear()
         self.tk.clipboard_append(content)
         self.tk.text.config(state=tk.DISABLED)
-        self.tk.wm_state('iconic')
+        self.tk.iconify()
 
 
 if __name__ == '__main__':

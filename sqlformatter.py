@@ -89,6 +89,5 @@ class GUI:
         self.tk.text.config(state=tk.DISABLED)
         self.tk.iconify()
 
-
 if __name__ == '__main__':
     gui = GUI()
